@@ -1,0 +1,17 @@
+.welcome {
+  text-align: center;
+  padding-top: 5rem;
+  letter-spacing: 0.5rem;
+  font-weight: bolder;
+}
+
+.introduction {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  line-height: 3rem;
+}
+
+.introduction a {
+  text-decoration: underline;
+}
