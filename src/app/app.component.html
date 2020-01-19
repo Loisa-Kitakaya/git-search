@@ -6,8 +6,8 @@
 <!-- navigation section -->
 <div class="container">
   <nav class="dashboard">
-    <a href="#">User</a>
-    <a href="#">Repo</a>
+    <a [routerLink]="['/users']" routerLinkActive="active">User</a>
+    <a [routerLink]="['/repos']" routerLinkActive="active">Repo</a>
   </nav>
 
   <div class="main">
@@ -36,7 +36,7 @@
 
     <!-- content section -->
     <div class="body">
-      
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
