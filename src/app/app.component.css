@@ -1,61 +1,53 @@
-body {
-  font-family: "Lato", sans-serif;
-  transition: background-color 0.5s;
-}
-
-.sidenav {
+/* navigation */
+.dashboard {
   height: 100%;
-  width: 0;
+  width: 160px;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
-  background-color: #111;
+  right: 0;
+  background-color: #29353b;
   overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 20px;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+.dashboard a {
+  padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  text-align: center;
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.menu-btn {
-  font-size: 30px;
-  cursor: pointer;
-  position: fixed;
-  top: 1rem;
-  left: 2rem;
+.dashboard a:hover {
   color: whitesmoke;
 }
 
-#main {
-  transition: margin-left 0.5s;
-  padding: 16px;
+.main {
+  margin-right: 160px;
+  padding: 10px 10px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  margin-top: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: #29353b;
+}
+
+.search-bar h1 {
+  color: whitesmoke;
+}
+
+.body {
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  background-color: rgba(240, 240, 240, 0.5);
 }
