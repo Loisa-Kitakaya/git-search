@@ -1,1 +1,55 @@
-<p>search-repos works!</p>
+<!-- CSS styling -->
+<link
+  rel="stylesheet"
+  href="/src/app/search-repos/search-repos.component.css"
+/>
+
+<!-- HTML DOM -->
+<div>
+  <hr />
+  <div class="search-section">
+    <!-- search -->
+    <div class="form-group search">
+      <input
+        type="text"
+        name="search"
+        id="search"
+        class="form-control"
+        #search
+        placeholder="search user..."
+        (keyup)="getName(search.value)"
+        [(ngModel)]="username"
+      />
+    </div>
+  </div>
+  <hr />
+  <!-- cont -->
+  <div>
+    <h1 class="title">
+      <strong
+        >All User Repositories from: {{ this.requestRepos.username }}
+      </strong>
+    </h1>
+    <hr />
+    <div *ngFor="let rep of repoarray.repoArray">
+      <div class="item">
+        <h3 appHighlight>
+          <strong>{{ rep.name }}</strong>
+        </h3>
+        <h6 *ngIf>
+          <strong>Description: </strong><em>{{ rep.description }}</em>
+        </h6>
+        <h6>
+          <strong>Language(s): </strong> <em>{{ rep.language }}</em>
+        </h6>
+        <h6>
+          <strong>License: </strong> <em>{{ rep.license }}</em>
+        </h6>
+        <button type="button" class="btn btn-success">
+          <a href="{{ rep.html_url }}" target="_blank">View on GitHub</a>
+        </button>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>
