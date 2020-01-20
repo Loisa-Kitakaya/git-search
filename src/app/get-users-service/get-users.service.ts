@@ -6,7 +6,7 @@ import { resolve } from "url";
 
 //constants that hold the git api url and the api access tokens
 const apiLink = `${environment.baseUrl}`;
-const apiToken = `${environment.accessToken}`;
+const apiToken = `${environment.accessTokenUser}`;
 
 @Injectable({
   providedIn: "root"
