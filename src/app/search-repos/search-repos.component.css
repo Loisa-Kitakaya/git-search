@@ -1,0 +1,13 @@
+.search-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: whitesmoke;
+}
