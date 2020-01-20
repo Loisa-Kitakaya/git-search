@@ -1,0 +1,33 @@
+.search-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+img {
+  height: 250px;
+  width: 250px;
+  margin-top: 2rem;
+  border: 1px solid;
+  border-color: rgb(145, 145, 145);
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+.link-button {
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.card {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+} 
