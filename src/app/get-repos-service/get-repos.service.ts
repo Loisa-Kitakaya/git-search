@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "src/environments/environment";
 import { RepoArray } from "../repos/repo-array";
+import { environment } from 'src/environments/environment.prod';
 
 //constants that hold the git api url and the api access tokens
 const apiLink = `${environment.baseUrl}`;

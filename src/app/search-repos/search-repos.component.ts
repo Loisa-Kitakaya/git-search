@@ -1,10 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { environment } from "src/environments/environment";
 import { RepositoryInformation } from "../repos/repository-information";
 import { HttpClient } from "@angular/common/http";
 import { RepoArray } from "../repos/repo-array";
 import { GetReposService } from "../get-repos-service/get-repos.service";
 import { GetUsersService } from "../get-users-service/get-users.service";
+import { environment } from 'src/environments/environment.prod';
 
 //constants that hold the git api url and the api access tokens
 const apiLink = `${environment.baseUrl}`;
@@ -21,7 +21,7 @@ export class SearchReposComponent implements OnInit {
   repoarray: RepoArray;
   username: string;
 
-  constructor(private http: HttpClient, private requestRepos: GetReposService) {
+  constructor(private http: HttpClient, public requestRepos: GetReposService) {
     this.repo = new RepositoryInformation("", "", "", "", "");
   }
 

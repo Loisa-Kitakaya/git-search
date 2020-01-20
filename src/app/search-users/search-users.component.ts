@@ -15,7 +15,7 @@ export class SearchUsersComponent implements OnInit {
   constructor(private requestUser: GetUsersService) {}
 
   // function that injects the user service
-  getName() {
+  getName(username) {
     this.requestUser.getName(this.username);
     this.requestUser.getRequest();
     this.user = this.requestUser.user;
