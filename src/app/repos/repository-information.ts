@@ -1,10 +1,10 @@
 export class RepositoryInformation {
   //constructor
   constructor(
-    public link: any,
-    public name: string,
-    public description: any,
-    public forks: any,
-    public license: any
+    public repoLink: any,
+    public repoName: string,
+    public repoDescription: any,
+    public repoForks: any,
+    public repoLicense: any
   ) {}
 }
