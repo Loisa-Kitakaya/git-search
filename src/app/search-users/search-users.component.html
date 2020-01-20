@@ -1,1 +1,92 @@
-<p>search-users works!</p>
+<!-- CSS styling -->
+<link
+  rel="stylesheet"
+  href="/src/app/search-users/search-users.component.css"
+/>
+
+<!-- HTML DOM -->
+<div>
+  <hr />
+  <div class="search-section">
+    <!-- search -->
+    <div class="form-group search">
+      <input
+        type="text"
+        name="search"
+        id="search"
+        class="form-control"
+        #search
+        placeholder="search user..."
+        (keyup)="getName(search.value)"
+        [(ngModel)]="username"
+      />
+    </div>
+  </div>
+  <hr />
+  <!-- cont -->
+  <div>
+    <div class="card">
+      <!-- grid system for responsiveness -->
+      <!-- row 1 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div>
+            <img [src]="user.avatar" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- row 2 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h3 appHighlight>
+            <strong>{{ user.username }}</strong>
+          </h3>
+        </div>
+      </div>
+      <!-- row 3 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h6>
+            <strong>Name: </strong> <em>{{ user.name }}</em>
+          </h6>
+        </div>
+      </div>
+      <!-- row 4 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h6>
+            <strong>Repositories: </strong> <em>{{ user.repositories }}</em>
+          </h6>
+        </div>
+      </div>
+      <!-- row 5 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h6>
+            <strong>Followers: </strong> <em>{{ user.followers }}</em>
+          </h6>
+        </div>
+      </div>
+      <!-- row 6 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <h6>
+            <strong>Following: </strong> <em>{{ user.following }}</em>
+          </h6>
+        </div>
+      </div>
+      <!-- row 7 -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="link-button">
+            <button class="btn btn-success">
+              <a [href]="user.link">Visit GitHub Page</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- end of grid -->
+    </div>
+    <hr />
+  </div>
+</div>
