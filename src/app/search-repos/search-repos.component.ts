@@ -22,7 +22,7 @@ export class SearchReposComponent implements OnInit {
   username: string;
 
   constructor(private http: HttpClient, public requestRepos: GetReposService) {
-    this.repo = new RepositoryInformation("", "", "", "", "");
+    this.repo = new RepositoryInformation("", "", "", "", new Date());
   }
 
   //function to get user input
@@ -39,7 +39,7 @@ export class SearchReposComponent implements OnInit {
       name: string;
       description: any;
       forks: any;
-      license: any;
+      created_at: any;
     }
     //make api request
     let promise = new Promise((resolve, reject) => {
@@ -52,7 +52,7 @@ export class SearchReposComponent implements OnInit {
             this.repo.repoName = response.name;
             this.repo.repoDescription = response.description;
             this.repo.repoForks = response.forks;
-            this.repo.repoLicense = response.license;
+            this.repo.repoDate = new Date(response.created_at);
 
             resolve();
           },
@@ -61,7 +61,7 @@ export class SearchReposComponent implements OnInit {
             this.repo.repoName = "";
             this.repo.repoDescription = "";
             this.repo.repoForks = "";
-            this.repo.repoLicense = "";
+            this.repo.repoDate = new Date();
 
             reject(error);
           }

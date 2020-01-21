@@ -30,7 +30,7 @@ export class GetReposService {
       name: string;
       description: any;
       forks: any;
-      license: any;
+      created_at: any;
     }
     //make api request
     let promise = new Promise((resolve, reject) => {

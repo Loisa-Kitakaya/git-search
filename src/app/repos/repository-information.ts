@@ -5,6 +5,6 @@ export class RepositoryInformation {
     public repoName: string,
     public repoDescription: any,
     public repoForks: any,
-    public repoLicense: any
+    public repoDate: Date
   ) {}
 }
