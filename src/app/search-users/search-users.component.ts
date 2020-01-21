@@ -12,10 +12,10 @@ export class SearchUsersComponent implements OnInit {
   user: UserInformation;
   username: string;
 
-  constructor(private requestUser: GetUsersService) {}
+  constructor(public requestUser: GetUsersService) {}
 
   // function that injects the user service
-  getName() {
+  getName(username: string) {
     this.requestUser.getName(this.username);
     this.requestUser.getRequest();
     this.user = this.requestUser.user;
