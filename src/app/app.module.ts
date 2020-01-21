@@ -9,13 +9,17 @@ import { WelcomePageComponent } from "./welcome-page/welcome-page.component";
 import { SearchUsersComponent } from "./search-users/search-users.component";
 import { SearchReposComponent } from "./search-repos/search-repos.component";
 import { RoutingModule } from './routing/routing/routing.module';
+import { CustomDatePipe } from './custom-date.pipe';
+import { CustomDirectiveDirective } from './custom-directive.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
     SearchUsersComponent,
-    SearchReposComponent
+    SearchReposComponent,
+    CustomDatePipe,
+    CustomDirectiveDirective
   ],
   imports: [
     BrowserModule,
