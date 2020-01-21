@@ -1,10 +1,18 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener } from "@angular/core";
 
 @Directive({
-  selector: '[appCustomDirective]'
+  selector: "[appCustomDirective]"
 })
 export class CustomDirectiveDirective {
+  constructor(private element: ElementRef) {}
 
-  constructor() { }
-
+  @HostListener("mouseenter") onMouseEnter() {
+    this.color("#AB47BC");
+  }
+  @HostListener("mouseleave") onMouseLeave() {
+    this.color("whitesmoke");
+  }
+  private color(action: string) {
+    this.element.nativeElement.style.color = action;
+  }
 }
